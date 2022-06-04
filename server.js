@@ -21,13 +21,18 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
 
     app.set("view engine", "ejs");
     app.use(bodyParser.urlencoded({ extended: true }));
+    app.use(express.static("public"));
+    app.use(bodyParser.json());
+
     app.get("/", (req, res) => {
-      quotesCollection.find().toArray()
-        .then(results => {
-          console.log(results)
-          res.render("index.ejs", { quotes: results })
+      quotesCollection
+        .find()
+        .toArray()
+        .then((results) => {
+          console.log(results);
+          res.render("index.ejs", { quotes: results });
         })
-        .catch(error => console.error(error))
+        .catch((error) => console.error(error));
 
       //res.sendFile(__dirname + "/index.html");
     });
@@ -35,11 +40,13 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
     app.post("/quotes", (req, res) => {
       quotesCollection.insertOne(req.body).then((result) => {
         res.redirect("/");
-        console.log(result)
+        console.log(result);
       });
       console.log(req.body);
     });
-
+    app.put("/quotes", (req, res) => {
+      console.log(req.body);
+    });
     app.listen(3000, function () {
       console.log("listening on 3000");
     });

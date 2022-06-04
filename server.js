@@ -20,9 +20,9 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
     const quotesCollection = db.collection("quotes");
 
     app.set("view engine", "ejs");
-    app.use(bodyParser.urlencoded({ extended: true }));
-    app.use(express.static("public"));
-    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: true }))
+    app.use(express.static("public"))
+    app.use(bodyParser.json())
 
     app.get("/", (req, res) => {
       quotesCollection
@@ -45,8 +45,29 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
       console.log(req.body);
     });
     app.put("/quotes", (req, res) => {
-      console.log(req.body);
+      quotesCollection.findOneAndUpdate(
+        { name: "Yoda" }, 
+        {
+          $set: {
+            name: req.body.name,
+            quote: req.body.quote
+          }
+        },
+        {
+          upsert: true
+        }
+
+      ).then(result => {
+        console.log(results)
+        res.json('Success')
+      })
+      .catch(error=>console.error(error))
     });
+
+    app.delete('/quotes', (req, res) => {
+      
+    })
+    
     app.listen(3000, function () {
       console.log("listening on 3000");
     });

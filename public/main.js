@@ -1,5 +1,5 @@
 const update = document.querySelector("#update-button");
-const deleteButton - document.querySelector('#delete-button')
+const deleteButton = document.querySelector('#delete-button')
 
 update.addEventListener("click", (_) => {
   fetch("/quotes", {
@@ -29,7 +29,7 @@ deleteButton.addEventListener('click', _ => {
      .then((res) => {
       if (res.ok) return res.json();
     })
-    .then((response) => {
+    .then((data) => {
       window.location.reload()
     });
 })

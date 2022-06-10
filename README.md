@@ -86,8 +86,8 @@ I learned to allow ample time for debuggin because of x,y,z.
 
 
 #### Known Bugs <a name="bugs"></a>
-- [ ] This features needs work
-- [ ] So does this one
+- [ ] The delete function needs work
+- [ ] 
 
 
 #### Additional Features for future Development <a name="features"></a>

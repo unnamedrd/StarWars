@@ -41,8 +41,9 @@ MVP Features
 
 
 Extra
-- Search Products functionality 
-- LogIn/Authentication 
+- Search quotes 
+
+
 
 
 

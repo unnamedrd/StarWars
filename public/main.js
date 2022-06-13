@@ -23,7 +23,7 @@ deleteButton.addEventListener("click", (_) => {
     method: "delete",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      name: "Darth Vader",
+      name: "Darth Vadar",
     }),
   })
     .then((res) => {

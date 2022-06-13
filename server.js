@@ -44,6 +44,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
       });
       console.log(req.body);
     });
+
     app.put("/quotes", (req, res) => {
       quotesCollection
         .findOneAndUpdate(
@@ -74,7 +75,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
           { name: req.body.name }
         )
         .then(result => {
-          res.json("Deleted Darth Vader Quote");
+          res.json(`Deleted Darth Vader Quote`);
         })
         .catch((error) => console.error(error));
     });

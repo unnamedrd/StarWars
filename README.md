@@ -26,9 +26,6 @@ The live site/demo is here: https:// [insert link to live site]
 ## PROCESS <a name="process"></a>
 ## Design <a name="design"></a>
 
-[Insert Design files if you have them; Figma, Sketch, PDF Design System]
-
-
 
 
 

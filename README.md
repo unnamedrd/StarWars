@@ -26,9 +26,6 @@ The live site/demo is here: https:// [insert link to live site]
 ## PROCESS <a name="process"></a>
 ## Design <a name="design"></a>
 
-[Insert Design files if you have them; Figma, Sketch, PDF Design System]
-
-
 
 
 
@@ -41,8 +38,9 @@ MVP Features
 
 
 Extra
-- Search Products functionality 
-- LogIn/Authentication 
+- Search quotes 
+
+
 
 
 
@@ -86,8 +84,8 @@ I learned to allow ample time for debuggin because of x,y,z.
 
 
 #### Known Bugs <a name="bugs"></a>
-- [ ] This features needs work
-- [ ] So does this one
+- [ ] The delete function needs work
+- [ ] 
 
 
 #### Additional Features for future Development <a name="features"></a>
